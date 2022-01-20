@@ -1,0 +1,146 @@
+@keyframes pop {
+  0% {
+    transform: scale(0.6);
+  }
+  30% {
+    transform: scale(1.1);
+  }
+  60% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/*main holder for chatbot*/
+.outercontainer{
+	border:1px solid #fff;
+	border-radius: 10px;
+	width: 40%;
+	overflow: hidden;
+	box-shadow: 2px 2px 14px 5px rgba(0,0,0,0.7);
+	overflow-x: hidden;
+	height: 80%;
+} 
+
+/*to make chatbot center*/
+.container{
+	display: flex;
+	justify-content: center;
+	flex-flow: column;
+	align-items: center;
+	overflow-x: hidden;
+	background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(0,128,128,1)68%, rgba(0,225,225,1)100%);
+}
+
+body{
+				background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(0,128,128,1)68%, rgba(0,225,225,1)100%);
+				background-size: cover;
+			
+}
+
+/*to custamize header*/
+ 
+.header{
+	background: rgba(2,0,36,1);
+	text-transform: uppercase;
+}
+
+/*design scroable area*/
+.body{
+	scroll-behavior: smooth;
+	overflow-y: auto;
+	height: 500px;
+	max-height: 500px; 
+	/*background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(0,128,128,1)68%, rgba(0,225,225,1)100%);*/
+	overflow-x: hidden;
+}
+
+
+/*customize bg for inputbox*/
+.inmsg{
+	background:rgba(0,225,225,5);
+	word-wrap: normal;
+
+}
+
+/*design questions*/
+.question{
+  max-width: calc(100% - 76px);
+  padding: 8px;
+  margin: 8px 0 8px 12px;
+  border-radius: 5px;
+  background-color: rgba(170, 187, 204, 0.1);
+  color: #e3e3e3;
+  float: left;
+  font-size: 13px;
+  position: relative;
+  word-break: break-all;
+  clear: both;
+  animation: pop 0.3s forwards;
+	
+}
+
+/*to design answers*/
+.answer{
+  max-width: calc(100% - 76px);
+  padding: 8px;
+  margin: 8px 0 8px 12px;
+  border-radius: 5px;
+  background-color: rgba(170, 187, 204, 0.1);
+  color: #e3e3e3;
+  float: right;
+  font-size: 13px;
+  position: relative;
+  word-break: break-all;
+  clear: both;
+  animation: pop 0.3s forwards;
+  margin-right: 5px;
+	
+
+}
+
+#ans{
+	border-radius: 5px;
+	border:1px solid black;
+	position: relative;
+
+}
+
+/*design pseudo element for typing*/
+.typing{
+	width: 20px;
+}
+
+/*to redesign scroll and thumb*/
+.body::-webkit-scrollbar{
+	width: 5px;
+}
+
+.body::-webkit-scrollbar-track{
+	box-shadow: inset 0 0 5px grey;
+	border-radius: 10px;
+}
+
+.body::-webkit-scrollbar-thumb{
+	background: red;
+	border-radius: 10px;
+}
+
+.body::-webkit-scrollbar-thumb:hover{
+	background: #b30000;
+}
+
+
+/*to make chatbot responsive*/
+@media screen and (max-width: 768px){
+	.outercontainer{
+		width: 80% !important;
+	}
+}
+
+@media screen and (max-width: 435px){
+	.outercontainer{
+		width: 100% !important;
+	}
+}
